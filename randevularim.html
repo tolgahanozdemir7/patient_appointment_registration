@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevularım</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Randevularım</h1>
+    {% if randevular %}
+        <ul>
+            {% for randevu in randevular %}
+                <li>Randevu ID: {{ randevu.id }} - Doktor: {{ randevu.doktor.ad_soyad }} - Uzmanlık: {{ randevu.doktor.uzmanlik }} - Hastane: {{ randevu.doktor.hastane }} - Tarih: {{ randevu.tarih }} - Saat: {{ randevu.saat }} - Şikayet: {{ randevu.sikayet }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Hiç randevunuz yok.</p>
+    {% endif %}
+</body>
+</html>

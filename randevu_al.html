@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Al</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Randevu Al</h1>
+    <form action="{{ url_for('randevu_al') }}" method="POST">
+        <label for="il">İl:</label>
+        <input type="text" id="il" name="il" required>
+        
+        <label for="ilce">İlçe:</label>
+        <input type="text" id="ilce" name="ilce" required>
+        
+        <label for="sikayet">Şikayet:</label>
+        <textarea id="sikayet" name="sikayet" required></textarea>
+        
+        <label for="tarih">Tarih:</label>
+        <input type="date" id="tarih" name="tarih" required>
+        
+        <label for="saat">Saat:</label>
+        <input type="time" id="saat" name="saat" required>
+        
+        <button type="submit">Randevu Al</button>
+    </form>
+</body>
+</html>

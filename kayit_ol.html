@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Kayıt Ol</h1>
+    <form action="{{ url_for('kayit_ol') }}" method="POST">
+        <label for="ad_soyad">Ad Soyad:</label>
+        <input type="text" id="ad_soyad" name="ad_soyad" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="sifre">Şifre:</label>
+        <input type="password" id="sifre" name="sifre" required>
+        
+        <label for="il">İl:</label>
+        <input type="text" id="il" name="il" required>
+        
+        <label for="ilce">İlçe:</label>
+        <input type="text" id="ilce" name="ilce" required>
+        
+        <button type="submit">Kayıt Ol</button>
+    </form>
+</body>
+</html>

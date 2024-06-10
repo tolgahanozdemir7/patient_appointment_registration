@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hastane Randevu Sistemi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Online Hastane Randevu Sistemi</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('kayit_ol') }}">Kayit Ol</a></li>
+            <li><a href="{{ url_for('giris_yap') }}">Giriş Yap</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
